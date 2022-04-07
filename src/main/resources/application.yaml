@@ -10,4 +10,9 @@ spring:
     hibernate:
       ddl-auto: create-drop
     open-in-view: false
+  flyway:
+    enabled: true
+    url: jdbc:postgresql://localhost:5432/migration-example?currentSchema=migration-example
+    user: me
+    password: me
 
