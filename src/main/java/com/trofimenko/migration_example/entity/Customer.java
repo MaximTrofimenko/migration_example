@@ -28,7 +28,7 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "customer_name")
+    @Column(name = "customer_name", nullable = false, length = 50)
     private String customerName;
 
     @Column(name = "level")

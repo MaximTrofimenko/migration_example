@@ -1,5 +1,5 @@
-Минимальная возможная конфигурация для работы с flyway в связке с spring boot
+Добавлены миграции для представленных в проекте сущностей
 
-1. зависимость flyway Core https://mvnrepository.com/artifact/org.flywaydb/flyway-core
-2. настройки в application.yaml
-3. пустой V1__init.sql файл в директории resources/db/migration
+1. меняем в application.yaml свойство spring:jpa:hibernate:ddl-auto: validate
+2. добавляем миграции и данные для наполнения таблицы customers
+
