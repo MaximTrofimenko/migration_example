@@ -26,3 +26,4 @@ migrate будет игнорировать все миграции вплоть
 7. mvn flyway:undo - отменяет последнюю примененную версионную миграцию. 
 is not supported by Flyway Community Edition
 
+https://flywaydb.org/documentation/command/migrate
