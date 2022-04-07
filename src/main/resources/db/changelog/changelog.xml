@@ -4,4 +4,7 @@
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
 
+    <include file="2022-04-06-add-customers.xml" relativeToChangelogFile="true"/>
+    <include file="2022-04-06-add-products-orders.xml" relativeToChangelogFile="true"/>
+
 </databaseChangeLog>
