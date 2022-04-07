@@ -1,13 +1,10 @@
 <databaseChangeLog
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
-   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
-   http://www.liquibase.org/xml/ns/dbchangelog
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
 
-    <changeSet author="junior-программисту" id="add-customers">
+    <changeSet author="junior-программист" id="add-customers">
 
         <!--Таблица "покупатели"-->
         <createTable tableName="customers">
@@ -20,14 +17,12 @@
             <column name="level" type="int"/>
         </createTable>
 
-
         <!--Импорт данных-->
         <sqlFile encoding="utf8"
                  path="sql/2022-04-06-data-customers.sql"
                  relativeToChangelogFile="true"
                  splitStatements="true"
                  stripComments="true"/>
-
     </changeSet>
 
 </databaseChangeLog>

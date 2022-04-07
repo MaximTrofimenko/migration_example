@@ -43,4 +43,7 @@ public class Product {
 
     @ManyToMany(mappedBy = "products")
     private Set<Order> orders;
+
+//    @Column(name = "in_stock")
+//    private Boolean inStock;
 }

@@ -1,0 +1,21 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet author="junior-программист" id="edit-products">
+        <!--        если количесво записей о покупателях равно 0 то можно удалит колонку products и добавить новую in_stock-->
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*)
+                FROM "migration-example".customers;
+            </sqlCheck>
+        </preConditions>
+
+        <dropColumn tableName="products" columnName="category"/>
+        <addColumn tableName="products">
+            <column name="in_stock" type="boolean"/>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>
