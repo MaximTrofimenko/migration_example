@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+
+  postgres:
+    image: postgres:14.2-alpine
+    environment:
+      - POSTGRES_PASSWORD=me
+      - POSTGRES_USER=me
+      - POSTGRES_DB=migration-example
+    volumes:
+      - db-data:/var/lib/postgresql/data
+      - ./postgres/init:/docker-entrypoint-initdb.d/
+    ports:
+      - "5432:5432"
+
+volumes:
+  db-data:

@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: liquibase-example
+  datasource:
+    url: "jdbc:postgresql://${DATABASE_HOST:localhost}:${DATABASE_PORT:5432}/${DATABASE_NAME:migration-example}?currentSchema=${DB_SCHEMA:migration-example}"
+    username: ${DATABASE_USERNAME:me}
+    password: ${DATABASE_PASSWORD:me}
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
